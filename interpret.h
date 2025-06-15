@@ -1,6 +1,9 @@
-#ifndef interprete_h
-#define interprete_h
+#ifndef INTERPRET_H
+#define INTERPRET_H
 
-void interpret (const char *source) ;
+#include "stack.h"   // <-- inclua o stack.h aqui para conhecer Stack
+
+void interpret(const char *source);
+void set_stack(Stack* s);
 
 #endif

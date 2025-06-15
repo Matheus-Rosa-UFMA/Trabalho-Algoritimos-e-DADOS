@@ -16,7 +16,8 @@ static void repl()
 }
 
 int main () {
-
+    Stack* pilha = new_stack(100);
+    set_stack(pilha);
     repl();
     return 0;
 }
