@@ -14,11 +14,11 @@ Este é o ambiente de desenvolvimento (IDE) que você usará para visualizar, ed
 
 
 2. COMANDO DE COMPILAÇÃO:
-gcc main.c interpret.c stack.c -o maquina-pilha
+gcc main.c interpret.c stack.c list.c-o maquina-pilha
 
 Explicação:
 - gcc: É o compilador de C (GNU Compiler Collection).
-- main.c interpret.c stack.c: Arquivos-fonte do projeto.
+- main.c interpret.c stack.c List.C: Arquivos-fonte do projeto.
 - -o maquina-pilha: Nome do arquivo executável gerado.
 
 Resultado: Um arquivo chamado "maquina-pilha" será criado.
@@ -41,6 +41,7 @@ divisão (div) - Desempilha dois valores, divide o primeiro pelo segundo (divis�
 multiplicação(mul) - Desempilha dois valores, multiplica, e empilha o resultado. 
 push  - Adiciona um valor à pilha.
 print - Imprime o valor no topo da pilha.
+pop - desempilha e adiciona o valor na variável.
 
 
 5.  COMO UTILIZAR
@@ -50,7 +51,14 @@ Após iniciar a máquina virtual, você pode inserir comandos como:
 push 10
 push 20
 add
-print
-
+pop a 
+push 2 
+push 3 
+add
+pop b 
+push a 
+push b
+add 
+print 
 Saída:
-30
+35

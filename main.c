@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "interpret.h"
 #include "stack.h"
+#include "list.h"
 
-static void repl()
-{
+// Modifique repl para aceitar um argumento List*
+static void repl(List* lista) { //
     char line[1024];
     for (;;) {
         printf("> ");
@@ -11,13 +12,17 @@ static void repl()
             printf("\n");
             break;
         }
-        interpret(line);
+        interpret(line, lista); //
     }
 }
 
 int main () {
     Stack* pilha = new_stack(100);
+    List* lista = new_list();
+    
     set_stack(pilha);
-    repl();
+    set_list(lista);
+    
+    repl(lista); //
     return 0;
 }
